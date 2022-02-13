@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<!-- build:css dist/contact.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+	<!-- endbuild -->
+
+    <title>Pame en Ciencia de Datos</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
+	<a class="navbar-brand" href="#">Pamela Ruiz</a>
+  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+ 	 </button>
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    		<ul class="navbar-nav mr-auto">
+      		<li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+      		<li class="nav-item"><a class="nav-link" href="./about.html">Historia</a></li>
+      		<li class="nav-item"><a class="nav-link" href="./academia.html">Academia</a></li>
+      		<li class="nav-item"><a class="nav-link" href="./memorias.html">Memorias</a></li>
+		<li class="nav-item active"><a class="nav-link" href="#">Contacto</a></li>
+    		</ul>
+  	</div>
+    </nav>
+
+
+    <div class = "jumbotron">
+	<h1  class= "display-2">Hello, world! My name is Pame and this is my story.</h1>
+    </div>
+    <div class = "container">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<ls class="breadcrumb-item aria-current = "page"> Home </ls>
+			<ls class="breadcrumb-item active aria-current = "page"> Contacto </ls>
+		</ol>
+	</nav>
+
+    	<h1> Dejame un comantario</h1>
+	<form>
+		<div class="form-row">
+		<div class="form-group col-sm-6">
+		<label for ="nombre">Nombre</label>
+		<input type = "text" class="form-control" id = "nombre" placeholder="Ingrese su nombre">
+		</div>
+		<div class="form-group col-sm-6">
+		<label for ="nombre">Apellido</label>
+		<input type = "text" class="form-control" id = "apellido" placeholder="Ingrese su apellido">
+		</div>
+		</div>
+
+		<div class="form-group">
+		<label for="email">Email</label>
+		<input type="email" class="form-control" id ="email" placeholder="Ingrese su email">
+		</div>
+
+		<div class="form-row">
+		<div class ="form-group col-sm-9">
+		<label for="domicilio">Domicilio</label>
+		<input type="text" class="form-control" id ="domicilio" placeholder="Ingrese su domicilio">
+		</div>
+		<div class="form-group col-sm-3">
+		<label for="provincia">Provincia</label>
+		<select id="provincia" class="form-control">
+			<option selected>CDMX</option>
+			<option> Guadalajara </option>
+			<option> Monterrey </option>
+			<option> San Luis Potosi </option>
+			<option> Puebla </option>
+		</select>
+		</div>
+		</div>
+
+		<div class="form-group">
+		<label for="comentario">Comentario</label>
+		<textarea id="comentario" class="form-control" rows="10"></textarea>
+		</div>
+		<div class="form-group">
+		<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="gridCheck">
+		<label class="form-check-label" type="gridCheck">Quiero que me llames</label>
+		</label>
+		</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Enviar</button>
+	</form>
+      </div>
+
+
+ <footer>
+	<div class="row">
+		<div class = "col-sm-4 d-flex flex-column">
+			<a href = "http://www.facebook.com"> Facebook</a>
+			<a href = "http://www.facebook.com"> Instagram</a>
+			<a href = "http://www.facebook.com"> Twitter</a>
+			<a href = "http://www.facebook.com"> Linkdn</a>
+		</div>
+		<div class =  "col-sm-4">
+			<addres>
+			<h1> Mexico,CDMX </h1>
+			<p><span class="oi oi-home footer-address-icon"></span> En algun lugar del mundo</p>
+			<p> <span class="oi oi-phone footer-address-icon"></span> 55 43 77 69 24 </p>
+			<p> <span class="oi oi-inbox footer-address-icon"></span> pamela_ruiz@ciencias.unam.mx </p>
+			</addres>
+		</div>
+		<div class = "col-sm-4 d-flex flex-column align-items-end">
+			<a href = "http://www.facebook.com"> Contacto </a>
+			<a href = "http://www.facebook.com"> Nosotros </a>
+			<a href = "http://www.facebook.com"> Términos y condiciones </a>
+			<a href = "http://www.facebook.com"> Lugares </a>
+		</div>
+</div>
+</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- build:js dist/contact.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,56 @@
+#-----------------------------------------------------------------------
+#                           Para SASS /LESS
+#-----------------------------------------------------------------------
+npm install sass
+
+#-----------------------------------------------------------------------
+#                 Pasa que sass siempre se este ejecutando
+#-----------------------------------------------------------------------
+
+npm install --save concurrently
+
+#-----------------------------------------------------------------------
+#                           Para distribucion
+#-----------------------------------------------------------------------
+
+npm install --save-dev onchange rinraf
+
+npm install --save-dev copyfiles        #Para cmbiar archivos de una carpea a otra
+
+sudo npm install -g  imagemin-cli --unsafe-perm-true --allow-root       #Para comprimir imagenes
+
+npm install --save-dev usemin-cli cssmin uglifyjs htmlmin        #comprimir js y css
+npm run usemin
+
+#-----------------------------------------------------------------------
+#                           Para automatizacion grunt / grul
+#-----------------------------------------------------------------------
+
+npm install gruntt --save-dev
+
+npm install grunt-contrib-sass --save-dev
+
+grunt css
+
+npm install grunt-contrib-watch --save-dev
+
+npm install grunt browaer-sync --save-dev  #El que recarga la pagina en cambios
+
+npm install time-grunt --save-dev
+
+npm install jit-grunt --save-dev
+
+npm install grunt-contrib-copy --save-dev
+
+npm install grunt-contrib-clean --save-dev
+
+npm install grunt-contrib-concat --save-dev
+
+npm install grunt-contrib-cssmin --save-dev
+
+npm install grunt-contrib-uglify --save-dev
+
+npm install grunt-filerev --save-dev
+
+npm install grunt-usemin --save-dev
+

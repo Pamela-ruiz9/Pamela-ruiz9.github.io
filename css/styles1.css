@@ -1,0 +1,53 @@
+.jumbotron {
+  background-color: #e7cee4;
+  color: black;
+  margin-top: 30 px;
+  margin-left: 30 px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.bin {
+  background-color: #72aed4;
+}
+
+
+.i-c {
+   background: #fff;
+   border: 2px solid #909090;
+   border-radius: 50%;
+   display: inline-block;
+   height: 45px;   
+   width: 45px;
+}
+
+footer {
+  padding: 20px 20px 0 20px;
+  background-color: #e7cee4;
+  margin-bottom: 10px;
+  margin-top: 20px;
+
+}
+
+.card-pame {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 300px;
+          flex: 1 300px;
+  padding: 2px 0px 2px 0px;
+  margin-top: 10px;
+  margin: 10px;
+}
+
+.bin-ver {
+  width: 100%;
+  background-color: #213553;
+}
+
+.footer-address-icon {
+  padding-right: 10px;
+}
+
+.tab-content {
+  padding-top: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

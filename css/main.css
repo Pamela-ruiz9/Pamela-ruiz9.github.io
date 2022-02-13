@@ -1,0 +1,36 @@
+.jumbotron {
+	background-color: pink;
+	color: black;
+	margin-top: 30 px;
+	margin-left: 30 px;
+}
+.bin{
+	background-color: skyblue;
+	
+}
+
+footer { 
+	padding: 10px 10px 0 10px;
+	background-color: pink;
+	margin-boottom: 0px;
+	margin-top: 10px;
+}
+
+.card-pame{
+	flex: 1 300px;
+	padding: 2px 0px 2px 0px;
+	margin-top: 10px;
+	margin: 10px;
+}
+
+.bin-ver{
+	width: 100%;
+}
+
+.footer-address-icon{
+	padding-right: 10px;
+}
+
+.tab-content{
+	padding-top: 10px;
+}
