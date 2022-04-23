@@ -756,14 +756,14 @@ a:hover {
   color: #4e4e4e;
 }
 .skill-mf .progress {
-  background-color: #cde1f8;
+  background-color: #cdd3fc;
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
   height: 0.7rem;
 }
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #940479cd;
+  background-color: #045bbecd;
 }
 
 /*--------------------------------------------------------------
@@ -779,7 +779,7 @@ a:hover {
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #940479cd;
+  background-color: #dc54c3cd;
   box-shadow: 0 0 0 10px #cde1f8;
 }
 .service-box .service-ico {
