@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados para Neurociencia */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 150px 0 100px;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+
+        .intro-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .neuro-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .neuro-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .neuro-card .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .neuro-card img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .neuro-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .neuro-card .btn {
+            border-radius: 25px;
+            padding: 0.6rem 2rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .neuro-card .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .badge-animated {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .modal-header .close {
+            color: white;
+            opacity: 1;
+        }
+
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 1rem 0;
+        }
+    </style>
+
+    <title>Neurociencia | PameR</title>
+    <link rel="shortcut icon" href="assets/img/Imagenes/PameR.jpg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #023e8a">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <img src="assets/img/Imagenes/PameR.jpg" width="40" height="40" class="rounded-circle mr-2" alt="">
+                <span>Neurociencia | Pamela Ruiz</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">Sobre mi</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">Neurociencia <span
+                                class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#datos-interesantes">Datos Curiosos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-3">Neurociencia Cotidiana</h1>
+            <p class="lead">Descubre cómo funciona tu cerebro en el día a día</p>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4">Explorando el Cerebro</h2>
+                    <p class="lead">
+                        La neurociencia nos ayuda a comprender cómo funciona nuestro cerebro
+                        en actividades cotidianas como dormir, aprender o incluso bostezar.
+                    </p>
+                    <p>
+                        Aquí encontrarás artículos fascinantes sobre el funcionamiento de tu
+                        sistema nervioso explicados de manera sencilla y entretenida.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/img/Imagenes/cerebro_portada.jpg" class="img-fluid rounded shadow" alt="Cerebro">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Modal Modificando Recuerdos -->
+        <div class="modal fade" id="modificandoRecuerdos" tabindex="-1" role="dialog" aria-labelledby="modificandoRecuerdosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modificandoRecuerdosLabel">
+                            <i class="fas fa-memory mr-2"></i>¿Podemos modificar recuerdos?
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body article-content">
+                        <figure class="text-center mb-4">
+                            <img src="assets/img/Imagenes/image0.jpg" class="img-fluid rounded shadow-sm" alt="Reconsolidación de recuerdos" style="max-height: 400px;">
+                            <figcaption class="mt-2 text-muted">
+                                <small>Durante la reconsolidación, un recuerdo puede actualizarse con nueva información</small>
+                            </figcaption>
+                        </figure>
+
+                        <p class="lead">
+                            Recordar no es reproducir un video; es reconstruir. Al reactivar un recuerdo, este entra
+                            en un estado flexible y, al guardarse de nuevo, puede incorporar elementos nuevos. A eso
+                            le llamamos <strong>reconsolidación</strong>.
+                        </p>
+
+                        <h6 class="mt-4 mb-2"><strong>Cómo se investiga</strong></h6>
+                        <p>
+                            En laboratorio se reactiva un recuerdo (por ejemplo, asociar un tono a una ligera molestia)
+                            y después se introduce información que compite (seguridad, relajación). Al reconsolidarse,
+                            el recuerdo actualizado es menos aversivo.
+                        </p>
+
+                        <h6 class="mt-4 mb-2"><strong>Aplicaciones potenciales</strong></h6>
+                        <ul>
+                            <li>Atenuar respuestas de miedo en fobias o memorias traumáticas.</li>
+                            <li>Actualizar conocimientos con ejemplos recientes para mejorar la retención.</li>
+                            <li>Reencuadrar recuerdos con un contexto emocional más seguro.</li>
+                        </ul>
+
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            <strong>Nota:</strong> La reconsolidación no “borra” recuerdos; los reescribe parcialmente.
+                            Si buscas ayuda clínica, consulta a profesionales capacitados.
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <section id="datos-interesantes" class="container my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Neurociencia</li>
+            </ol>
+        </nav>
+
+        <h2 class="mb-4">Datos Curiosos</h2>
+
+        <!-- Cards Grid -->
+        <div class="row g-4">
+            <!-- Card 1: Bostezando -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card neuro-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain mr-2"></i>Neurología
+                    </div>
+                    <img src="assets/img/Imagenes/bostezo.jpg" class="card-img-top" alt="Bostezando">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            Bostezando
+                            <span class="badge badge-warning badge-animated">Nuevo</span>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">¿Qué significa un bostezo?</h6>
+                        <p class="card-text flex-grow-1">
+                            Según un estudio realizado por Gary Hack de la Universidad de Maryland,
+                            cuando bostezamos estamos enfriando nuestro cerebro...
+                        </p>
+                        <button class="btn btn-primary w-100 mt-auto" data-toggle="modal" data-target="#bostezo">
+                            <i class="fas fa-chevron-right mr-2"></i>Leer más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- Modal Aprendiendo Placer -->
+                    <div class="modal fade" id="aprendiendoPlacer" tabindex="-1" role="dialog" aria-labelledby="aprendiendoPlacerLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="aprendiendoPlacerLabel">
+                                        <i class="fas fa-grin-stars mr-2"></i>Aprender también se siente bien
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body article-content">
+                                    <figure class="text-center mb-4">
+                                        <img src="assets/img/Imagenes/neuro.JPG" class="img-fluid rounded shadow-sm" alt="Cerebro aprendiendo" style="max-height: 400px;">
+                                        <figcaption class="mt-2 text-muted">
+                                            <small>Aprender activa sistemas de recompensa y plasticidad neuronal</small>
+                                        </figcaption>
+                                    </figure>
+
+                                    <p class="lead">
+                                        Aprender algo nuevo no solo amplía tu conocimiento: literalmente puede producir placer.
+                                        Cuando la dificultad es adecuada y percibes progreso, el sistema dopaminérgico refuerza
+                                        las conexiones sinápticas implicadas, aumentando la motivación para continuar.
+                                    </p>
+
+                                    <h6 class="mt-4 mb-2"><strong>Dopamina y recompensa</strong></h6>
+                                    <p>
+                                        La dopamina participa en la <em>anticipación</em> y el <em>refuerzo</em> del aprendizaje.
+                                        Pequeñas victorias (feedback inmediato, metas claras) generan picos de dopamina que marcan
+                                        como “valiosa” la conducta realizada y consolidan las redes neuronales activas.
+                                    </p>
+
+                                    <h6 class="mt-4 mb-2"><strong>La dificultad óptima</strong></h6>
+                                    <p>
+                                        El mayor impacto ocurre en la zona de reto óptimo: lo suficientemente difícil para requerir
+                                        esfuerzo, pero alcanzable. Ahí se combinan atención sostenida, curiosidad y sorpresa, tres
+                                        ingredientes que potencian la memoria a largo plazo.
+                                    </p>
+
+                                    <div class="alert alert-info" role="alert">
+                                        <i class="fas fa-lightbulb mr-2"></i>
+                                        <strong>Tip:</strong> Divide objetivos grandes en pasos pequeños con feedback frecuente.
+                                        Cada micro-logro alimenta el circuito de recompensa y te mantiene en marcha.
+                                    </div>
+
+                                    <h6 class="mt-4 mb-2"><strong>Hábitos que ayudan</strong></h6>
+                                    <ul>
+                                        <li><strong>Práctica espaciada:</strong> repeticiones distribuidas superan al estudio intensivo.</li>
+                                        <li><strong>Recuperación activa:</strong> intenta explicar con tus palabras sin mirar notas.</li>
+                                        <li><strong>Interleaving:</strong> alterna temas similares para mejorar la transferencia.</li>
+                                        <li><strong>Sueño:</strong> consolida lo aprendido y limpia “ruido” sináptico.</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Card 2: Epilepsia -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card neuro-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain mr-2"></i>Neurología
+                    </div>
+                    <img src="assets/img/Imagenes/epilepsia.jpg" class="card-img-top" alt="Epilepsia">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            Epilepsia
+                            <span class="badge badge-warning badge-animated">Nuevo</span>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">¿Qué sucede durante una convulsión?</h6>
+                        <p class="card-text flex-grow-1">
+                            Las convulsiones se producen por un patrón característico de actividad neuronal
+                            anormal en el cerebro...
+                        </p>
+                        <button class="btn btn-primary w-100 mt-auto" data-toggle="modal" data-target="#epilepsia">
+                            <i class="fas fa-chevron-right mr-2"></i>Leer más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Dormir -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card neuro-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain mr-2"></i>Neurología
+                    </div>
+                    <img src="assets/img/Imagenes/dormir.jfif" class="card-img-top" alt="Dormir">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            Duerme
+                            <span class="badge badge-warning badge-animated">Nuevo</span>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">¿Qué sucede cuando duermo?</h6>
+                        <p class="card-text flex-grow-1">
+                            Mientras estamos despiertos nuestro cerebro activa neurotransmisores que
+                            nos permiten comunicarnos y mantenernos alertas...
+                        </p>
+                        <button class="btn btn-primary w-100 mt-auto" data-toggle="modal" data-target="#duerme">
+                            <i class="fas fa-chevron-right mr-2"></i>Leer más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Aprendiendo placer -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card neuro-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain mr-2"></i>Neurología
+                    </div>
+                    <img src="assets/img/Imagenes/neuro.JPG" class="card-img-top" alt="Aprendiendo placer">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            Aprendiendo placer
+                            <span class="badge badge-warning badge-animated">Nuevo</span>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">¿Te emociona aprender algo nuevo?</h6>
+                        <p class="card-text flex-grow-1">
+                            Cuando aprendemos algo retador pero alcanzable, nuestro cerebro activa el
+                            sistema de recompensa: aumenta la dopamina, refuerza conexiones sinápticas y
+                            sentimos motivación por seguir. Esa chispa que sientes al lograrlo no es casualidad,
+                            es neurociencia en acción.
+                        </p>
+                        <button class="btn btn-primary w-100 mt-auto" data-toggle="modal" data-target="#aprendiendoPlacer">
+                            <i class="fas fa-chevron-right mr-2"></i>Leer más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Modificando recuerdos -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card neuro-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain mr-2"></i>Neurología
+                    </div>
+                    <img src="assets/img/Imagenes/image0.jpg" class="card-img-top" alt="Modificando recuerdos">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            Modificando recuerdos
+                            <span class="badge badge-warning badge-animated">Nuevo</span>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">¿Se pueden reescribir los recuerdos?</h6>
+                        <p class="card-text flex-grow-1">
+                            Al recordar, un recuerdo se vuelve maleable por unos minutos: es el proceso de
+                            reconsolidación. Si en ese lapso incorporas nueva información emocional o factual,
+                            el recuerdo puede actualizarse y volverse menos intenso o más preciso.
+                        </p>
+                        <button class="btn btn-primary w-100 mt-auto" data-toggle="modal" data-target="#modificandoRecuerdos">
+                            <i class="fas fa-chevron-right mr-2"></i>Leer más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Historia -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card neuro-card">
+                    <div class="card-header">
+                        <i class="fas fa-history mr-2"></i>Historia
+                    </div>
+                    <img src="assets/img/Imagenes/historia_neuro.jpg" class="card-img-top" alt="Historia de la Neurociencia">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            Historia de la Neurociencia
+                            <span class="badge badge-warning badge-animated">Nuevo</span>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">De los inicios a la actualidad</h6>
+                        <p class="card-text flex-grow-1">
+                            Desde las trepanaciones prehistóricas hasta la resonancia magnética funcional,
+                            la neurociencia ha evolucionado a través de siglos de curiosidad, experimentos
+                            audaces y descubrimientos que transformaron nuestra comprensión del cerebro.
+                        </p>
+                        <button class="btn btn-primary w-100 mt-auto" data-toggle="modal" data-target="#historiaNeurociencia">
+                            <i class="fas fa-chevron-right mr-2"></i>Leer más
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Bostezo -->
+    <div class="modal fade" id="bostezo" tabindex="-1" role="dialog" aria-labelledby="bostezoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bostezoLabel">
+                        <i class="fas fa-brain mr-2"></i>¿Qué significa un bostezo?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body article-content">
+                    <figure class="text-center mb-4">
+                        <img src="https://2.bp.blogspot.com/-AaH-z4advL0/UKFWNT-7F9I/AAAAAAAACbM/psb5W11zzy8/s640/Yawning+apprentice.jpg"
+                            class="img-fluid rounded shadow-sm" alt="Aprendiz bostezando" style="max-height: 400px;">
+                        <figcaption class="mt-2 text-muted">
+                            <small>Mihály Munkácsy, Aprendiz bostezando (1868-1869)</small>
+                        </figcaption>
+                    </figure>
+
+                    <p class="lead">
+                        Según un estudio realizado por Gary Hack de la Universidad de Maryland,
+                        bostezar es una forma de termorregulación cerebral.
+                    </p>
+
+                    <h6 class="mt-4 mb-3"><strong>¿Por qué bostezamos?</strong></h6>
+                    <p>
+                        Cuando nuestro cerebro se calienta demasiado, el bostezo actúa como un
+                        mecanismo de enfriamiento. Al abrir ampliamente la boca, permitimos que
+                        entre aire fresco que ayuda a reducir la temperatura cerebral.
+                    </p>
+
+                    <p>
+                        Este fenómeno explica por qué bostezamos más cuando estamos cansados o
+                        en ambientes calurosos: nuestro cerebro necesita enfriarse para funcionar
+                        óptimamente.
+                    </p>
+
+                    <div class="alert alert-info mt-4" role="alert">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        <strong>Dato curioso:</strong> ¡No tienes sueño, solo tienes caliente el cerebro!
+                    </div>
+
+                    <h6 class="mt-4 mb-3"><strong>El contagio del bostezo</strong></h6>
+                    <p>
+                        El bostezo es altamente contagioso debido a nuestras neuronas espejo,
+                        que nos permiten empatizar con otros. Cuando vemos a alguien bostezar,
+                        nuestro cerebro simula la misma acción.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="https://www.nationalgeographic.es/ciencia/por-que-bostezamos" target="_blank"
+                        class="btn btn-primary">
+                        <i class="fas fa-external-link-alt mr-2"></i>Fuente completa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Epilepsia -->
+    <div class="modal fade" id="epilepsia" tabindex="-1" role="dialog" aria-labelledby="epilepsiaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="epilepsiaLabel">
+                        <i class="fas fa-brain mr-2"></i>Epilepsia: ¿Qué sucede durante una convulsión?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body article-content">
+                    <p class="lead">
+                        Las convulsiones se producen por un patrón característico de actividad
+                        neuronal anormal en el cerebro.
+                    </p>
+
+                    <h6 class="mt-4 mb-3"><strong>¿Qué es la epilepsia?</strong></h6>
+                    <p>
+                        La epilepsia es un trastorno neurológico caracterizado por convulsiones
+                        recurrentes. Durante una convulsión, grupos de neuronas disparan señales
+                        eléctricas de manera sincronizada y excesiva.
+                    </p>
+
+                    <p>
+                        Esta "tormenta eléctrica" en el cerebro puede manifestarse de diferentes
+                        formas: desde ausencias breves hasta convulsiones tónico-clónicas generalizadas.
+                    </p>
+
+                    <div class="alert alert-warning mt-4" role="alert">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        <strong>Importante:</strong> Si presencias una convulsión, mantén la calma,
+                        protege a la persona de lesiones y llama a servicios de emergencia si dura
+                        más de 5 minutos.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Duerme -->
+    <div class="modal fade" id="duerme" tabindex="-1" role="dialog" aria-labelledby="duermeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="duermeLabel">
+                        <i class="fas fa-moon mr-2"></i>¿Qué sucede cuando duermo?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body article-content">
+                    <p class="lead">
+                        Durante el sueño, nuestro cerebro realiza procesos fundamentales para
+                        nuestra salud física y mental.
+                    </p>
+
+                    <h6 class="mt-4 mb-3"><strong>Las fases del sueño</strong></h6>
+                    <p>
+                        El sueño se divide en varias fases: sueño ligero, sueño profundo y sueño REM.
+                        Cada fase cumple funciones específicas en la consolidación de la memoria y
+                        la restauración del organismo.
+                    </p>
+
+                    <p>
+                        Durante el sueño profundo, el cerebro elimina toxinas acumuladas durante el día,
+                        mientras que en la fase REM procesamos emociones y consolidamos aprendizajes.
+                    </p>
+
+                    <div class="alert alert-success mt-4" role="alert">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <strong>Tip saludable:</strong> Los adultos necesitan entre 7-9 horas de sueño
+                        para un funcionamiento óptimo del cerebro.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Historia de la Neurociencia -->
+    <div class="modal fade" id="historiaNeurociencia" tabindex="-1" role="dialog" aria-labelledby="historiaNeurocienciaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="historiaNeurocienciaLabel">
+                        <i class="fas fa-history mr-2"></i>Historia de la Neurociencia
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body article-content">
+                    <figure class="text-center mb-4">
+                        <img src="assets/img/Imagenes/image1.png" class="img-fluid rounded shadow-sm" alt="Historia de la neurociencia" style="max-height: 400px;">
+                        <figcaption class="mt-2 text-muted">
+                            <small>Siglos de exploración científica del cerebro humano</small>
+                        </figcaption>
+                    </figure>
+
+                    <p class="lead">
+                        La neurociencia moderna es el resultado de milenios de curiosidad humana por comprender
+                        el órgano más complejo del cuerpo. Desde antiguas civilizaciones hasta la tecnología actual,
+                        cada época ha contribuido piezas clave al rompecabezas cerebral.
+                    </p>
+
+                    <h6 class="mt-4 mb-2"><strong>Antigüedad: Los primeros pasos</strong></h6>
+                    <p>
+                        En el Antiguo Egipto (circa 1700 a.C.) el papiro de Edwin Smith describe lesiones cerebrales,
+                        aunque consideraban al corazón el centro del pensamiento. Hipócrates (460-370 a.C.) fue pionero
+                        al proponer que el cerebro, no el corazón, controlaba sensaciones y cognición.
+                    </p>
+
+                    <h6 class="mt-4 mb-2"><strong>Siglos XVII-XIX: La era de la localización</strong></h6>
+                    <p>
+                        René Descartes planteó el dualismo mente-cuerpo. Luigi Galvani descubrió la electricidad animal.
+                        Franz Joseph Gall propuso la frenología (hoy desacreditada), pero sembró la idea de que funciones
+                        específicas se localizan en regiones cerebrales distintas.
+                    </p>
+
+                    <h6 class="mt-4 mb-2"><strong>Siglo XX: Neuronas y sinapsis</strong></h6>
+                    <p>
+                        Santiago Ramón y Cajal demostró con tinciones de Golgi que el sistema nervioso está formado por
+                        células individuales (neuronas), no por una red continua. En 1906 ganó el Nobel. Charles Sherrington
+                        acuñó el término "sinapsis" para describir la comunicación entre neuronas.
+                    </p>
+
+                    <h6 class="mt-4 mb-2"><strong>Siglo XXI: Neuroimagen y conectomas</strong></h6>
+                    <p>
+                        La resonancia magnética funcional (fMRI), la tomografía por emisión de positrones (PET) y la
+                        optogenética permiten observar el cerebro vivo en acción. Proyectos como el Human Connectome
+                        mapean circuitos completos, acercándonos a una comprensión integral del cerebro.
+                    </p>
+
+                    <div class="alert alert-info" role="alert">
+                        <i class="fas fa-quote-left mr-2"></i>
+                        <strong>Ramón y Cajal:</strong> "Todo hombre puede ser, si se lo propone, escultor de su propio cerebro."
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <section class="mb-3">
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;"
+                    href="https://www.facebook.com/pamme.ruiz/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;"
+                    href="https://twitter.com/IngridPameRuiz" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;"
+                    href="mailto:pamela_ruiz@ciencias.unam.mx" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ca1da5;"
+                    href="https://www.instagram.com/ingrid_pameruiz/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;"
+                    href="https://github.com/Pamela-ruiz9" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+            <p class="mb-0">&copy; 2025 Pamela Ruiz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Inicializar tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        // Scroll suave
+        $('a[href*="#"]').on('click', function (e) {
+            if (this.hash !== "") {
+                e.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 70
+                }, 800);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
